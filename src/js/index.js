@@ -85,7 +85,7 @@ function performance() {
         delay);
     }
   }
-  tl.fromTo(text, 3, { scale: 0.1, y: centerY - 36, z: 0.1 }, { scale: 1.8, ease: SlowMo.ease.config(0.5, 0.4) }, 0.3);
+  tl.fromTo(text, 3, { scale: 0.1, y: centerY - 180, z: 0.1 }, { scale: 1.8, ease: SlowMo.ease.config(0.5, 0.4) }, 0.3);
   tl.fromTo(text, 3, { opacity: 0 }, { autoAlpha: 1, ease: SlowMo.ease.config(0.5, 0.4, true) }, 0.3);
   tl.set(stars, { display: "none" });
   return tl;
@@ -106,17 +106,17 @@ function compatibility() {
   }
   tl.add(iconTimeline, 0);
   tl.fromTo("#browserIcons", 2.8, { transformOrigin: "center -160px", rotation: 170, z: 0.1 }, { rotation: 0, ease: Elastic.easeOut }, 0);
-  tl.set(text, { y: centerY - 200, x: 10, autoAlpha: 1 }, 0);
+  tl.set(text, { y: centerY - 380, x: 20, autoAlpha: 1 }, 0);
   for (i = 0; i < split.chars.length; i++) {
     tl.fromTo(split.chars[i], 2.4, { transformOrigin: "center -160px", z: 0.1, rotation: ((Math.random() < 0.5) ? 90 : -90) }, { rotation: 0, ease: Elastic.easeOut }, 0.3 + i * 0.06);
 
     tl.to(split.chars[i], 0.6, { y: 97, ease: Bounce.easeOut }, 3.4 + Math.random() * 0.6);
     tl.to(split.chars[i], 0.6, { autoAlpha: 0, ease: rough }, 4.5 + Math.random());
   }
-  TweenLite.set("#fallDown", { width: 420, left: 300, top: -35, autoAlpha: 0, textAlign: "left" });
-  tl.to("#fallDown", 0.5, { top: 81, autoAlpha: 1, ease: Back.easeOut }, 3.9);
+  TweenLite.set("#fallDown", { top: -35, autoAlpha: 0, textAlign: "left" });
+  tl.to("#fallDown", 0.5, { top: 320, autoAlpha: 1, ease: Back.easeOut }, 2);
   tl.to("#browserIcons", 0.5, { autoAlpha: 0 }, 8);
-  tl.to("#fallDown", 0.5, { left: "-=100", autoAlpha: 0, ease: Power1.easeIn }, 8);
+  tl.to("#fallDown", 0.5, { left: "-=50", autoAlpha: 0, ease: Power1.easeIn }, 4);
   return tl;
 }
 
@@ -132,7 +132,7 @@ function transforms() {
   TweenLite.set(split.words, { autoAlpha: 0, rotationX: -90 });
   TweenLite.set(box, { scale: 0.1, rotation: 0.1, autoAlpha: 0 });
   tl.to(box, 0.3, { autoAlpha: 1 });
-  tl.to(box, 7, { scale: 1, ease: Linear.easeNone, autoRound: false }, 0);
+  tl.to(box, 7, { scale: 0.5, ease: Linear.easeNone, autoRound: false }, 0);
   tl.to(scale, 0.5, { autoAlpha: 1, rotationX: 0, transformOrigin: "50% 50% -35px" }, 0);
   tl.to(box, 6, { rotation: 360.2 }, 1);
   tl.to(rotate, 0.5, { autoAlpha: 1, rotationX: 0, transformOrigin: "50% 50% -35px" }, 1);
@@ -141,7 +141,7 @@ function transforms() {
   tl.to(move, 0.5, { autoAlpha: 1, rotationX: 0, transformOrigin: "50% 50% -35px" }, 2);
   tl.to(independently, 0.5, { autoAlpha: 1, rotationX: 0, transformOrigin: "50% 50% -35px" }, 2.5);
   tl.to(box, 3, { rotationX: 360, ease: Elastic.easeOut }, 3.5);
-  tl.from(transformSub, 0.5, { top: "-=16", autoAlpha: 0 }, 4.5);
+  tl.from(transformSub, 0.5, { top: "-=20", autoAlpha: 0 }, 4.5);
   tl.to([transformSub, box], 0.5, { autoAlpha: 0 }, 7.4);
   tl.staggerTo(split.words.slice(0, 4), 0.5, { rotationX: 90, autoAlpha: 0 }, 0.2, 7);
   tl.to(independently, 0.5, { rotationX: -90, autoAlpha: 0 }, 7.3);
@@ -212,11 +212,13 @@ function newStandard() {
     chars = split.chars,
     positions = [chars[0].offsetLeft],
     i, xOffset;
-  positions[5] = chars[1].offsetLeft;
-  positions[9] = chars[2].offsetLeft;
-  positions[18] = chars[3].offsetLeft;
+
+  positions[7] = chars[1].offsetLeft;
+  positions[3] = chars[2].offsetLeft;
+  positions[15] = chars[3].offsetLeft;
   split.revert();
-  GSAP.innerHTML = "GreenSock Animation Platform";
+  // GSAP.innerHTML = "GreenSock Animation Platform";
+  GSAP.innerHTML = "Let is start a journey of heart !";
   split.split({ type: "words,chars" });
   tl.staggerFrom(split.words, 1.5, { z: -1000, autoAlpha: 0, ease: Power1.easeOut }, 0.3);
   tl.from("#newStandardText", 1, { autoAlpha: 0 });

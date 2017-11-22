@@ -46,13 +46,13 @@ const imageOption = {
 
 //less
 const targetLessArrPath = "./src/less/**/*.{css,less}";
-const desLessPath = "./dist/less";
+const desLessPath = "./dist/css";
 const desRevLessPath = "./rev/less";
 const desRevCssImagesPath = "./rev/cssMd5Images";
 
 //packageCss
-const targetPackageCssArrPath = "./src/package/**/*.{css,min.css}";
-const desPackageCssPath = "./dist/package";
+const targetPackageCssArrPath = "./src/packages/**/*.{css,min.css}";
+const desPackageCssPath = "./dist/packages";
 const desRevPackageCssPath = "./rev/packageCss";
 
 //es6Js
@@ -62,8 +62,8 @@ const desRevJsPath = "./rev/Es6Js";
 const desRevJsImagesPath = "./rev/JsMd5Images";
 
 //packageJs
-const targetPackageJsArrPath = "./src/package/**/*.{js,min.js}";
-const desPackageJsPath = "./dist/package";
+const targetPackageJsArrPath = "./src/packages/**/*.{js,min.js}";
+const desPackageJsPath = "./dist/packages";
 const desRevPackageJsPath = "./rev/packageJs";
 
 //图片
@@ -81,9 +81,9 @@ const distPath = "./dist/**";
 
 // md5
 const targetMd5ImagesLess = "./rev/cssMd5Images/less/**/*.{css,less}";
-const targetMd5PackageCss = "./rev/cssMd5Images/package/**/*.{css,min.css}";
+const targetMd5PackageCss = "./rev/cssMd5Images/packages/**/*.{css,min.css}";
 const targetMd5ImagesEs6Js = "./rev/JsMd5Images/js/**/*.js";
-const targetMd5ImagesPackageJs = "./rev/JsMd5Images/package/**/*.{js,min.js}";
+const targetMd5ImagesPackageJs = "./rev/JsMd5Images/packages/**/*.{js,min.js}";
 
 gulp.task('clean-dist', (cb) => {
     return del([distPath], cb);

@@ -1,35 +1,35 @@
+html {
+  height: 100%;
+}
 body {
   background-color: #000;
   overflow: hidden;
+  height: 100%;
 }
-
 #featureAnimation,
 #featureBox {
   background-color: #000;
-  height: 500px;
+  min-height: 100%;
   /* height: 220px; */
   overflow: hidden;
   line-height: normal;
   font-size: 80%;
 }
-
 #featureAnimation {
   position: relative;
   visibility: hidden;
-  margin: 20% auto;
+  display: flex;
+  align-items: center;
 }
-
 #featureBox {
   position: absolute;
 }
-
 #featureAnmation,
 #featureBox,
 #violator {
   left: 50%;
   transform: translate(-50%, 0);
 }
-
 #featureAnimation,
 #featureBox,
 #whyGSAP,
@@ -37,13 +37,11 @@ body {
 .featureTextWhite {
   width: 100%;
 }
-
 #whyGSAP,
 .featureTextGreen,
 .featureTextWhite {
   text-align: center;
 }
-
 #whyGSAP,
 .featureTextGreen,
 .featureTextWhite {
@@ -52,28 +50,23 @@ body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
   top: 50;
 }
-
 #compatibility {
   visibility: hidden;
 }
-
 .featureTextGreen {
   color: #91e600;
   font-weight: bold;
 }
-
 .featureTextWhite {
   color: white;
   font-weight: normal;
 }
-
 .star {
   position: absolute;
   width: 16px;
   height: 16px;
   display: none;
 }
-
 #browserIcons {
   top: 64px;
   left: 180px;
@@ -82,11 +75,9 @@ body {
   position: absolute;
   text-align: left;
 }
-
 #browserIcons img {
   position: absolute;
 }
-
 .featureTextMinor {
   color: #CCCCCC;
   font-weight: normal;
@@ -95,12 +86,10 @@ body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
   visibility: hidden;
 }
-
 .dot {
   position: absolute;
   background-color: #91e600;
 }
-
 #ctrl_slider {
   position: absolute;
   width: 824px;
