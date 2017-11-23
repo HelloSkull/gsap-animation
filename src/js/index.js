@@ -213,12 +213,13 @@ function newStandard() {
     positions = [chars[0].offsetLeft],
     i, xOffset;
 
-  positions[7] = chars[1].offsetLeft;
-  positions[3] = chars[2].offsetLeft;
-  positions[15] = chars[3].offsetLeft;
+  positions[11] = chars[1].offsetLeft;
+  positions[10] = chars[2].offsetLeft;
+  positions[26] = chars[3].offsetLeft;
   split.revert();
   // GSAP.innerHTML = "GreenSock Animation Platform";
-  GSAP.innerHTML = "Let is start a journey of heart !";
+  // lain
+  GSAP.innerHTML = "Let's immediately start a journey of heart  !";
   split.split({ type: "words,chars" });
   tl.staggerFrom(split.words, 1.5, { z: -1000, autoAlpha: 0, ease: Power1.easeOut }, 0.3);
   tl.from("#newStandardText", 1, { autoAlpha: 0 });

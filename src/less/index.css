@@ -133,3 +133,16 @@ body {
   width: 100%;
   height: 100%;
 }
+.lain {
+  font-weight: bold;
+  color: "#fce4ec";
+}
+.blue-col-1 {
+  color: "#81d4fa";
+}
+.orange-col-1 {
+  color: "#ffecb3";
+}
+.green-col-1 {
+  color: "#ccff90";
+}
